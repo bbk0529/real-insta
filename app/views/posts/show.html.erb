@@ -1,0 +1,7 @@
+<h1>Posts#show</h1>
+
+<img src="<%=@post.image_url %>" >
+<%=@post.story%>
+
+<%= link_to "[수정]", edit_post_path(@post.id)%>
+<%= link_to "[삭제]", post_path(@post.id), method:"delete" %>

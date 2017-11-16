@@ -1,0 +1,12 @@
+<h1>새POST 만들기#new</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
+
+
+
+
+<!-- form_for보내줄 곳과 어떻게 보낼지 지정  -->
+<%= form_tag(posts_path, method: "post") do %>
+  이미지 주소 <%=text_field_tag :img_url %> <br/>
+  스토리 <%=text_field_tag :story %> <br/>
+  <%=submit_tag "만들기" %>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>인스타그램</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+
+<%= link_to("New Post", new_post_path)%>
+<br/>
+
+<% @posts.each do |post| %>
+
+
+<img src ="<%=post.image_url %>" width="100"><br>
+
+
+<%=link_to "[보기]", "/posts/#{post.id}"%>
+<!-- <%=post.story%>  <br> -->
+
+<% end %>

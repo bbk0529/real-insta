@@ -1,0 +1,9 @@
+<h1>포스트 수정하기</h1>
+<p>Find me in app/views/posts/edit.html.erb</p>
+
+<!-- form_for보내줄 곳과 어떻게 보낼지 지정  -->
+<%= form_tag(post_path(@post.id), method: "put") do %>
+  이미지 주소 <%=text_field_tag :image_url, @post.image_url %> <br/>
+  스토리 <%=text_field_tag :story, @post.story %> <br/>
+  <%=submit_tag "수정하기" %>
+<% end %>
